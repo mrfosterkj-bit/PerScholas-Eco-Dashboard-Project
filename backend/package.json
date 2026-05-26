@@ -1,1 +1,8 @@
 // Will contain backend dependencies, scripts and app metadata (psql, GIS libraries, auth packages, etc.)
+3GET  /api/counties                          → list all SC counties
+GET  /api/counties/:countyId                → details for one county
+POST /api/assessments                       → submit lat/long or parcel, get risk report
+GET  /api/risks/species?county=charleston   → endangered species in county
+GET  /api/risks/wetlands?lat=x&lng=y        → wetlands overlap at point
+GET  /api/risks/flood?lat=x&lng=y           → flood zone lookup
+GET  /api/risks/compliance?county=x         → regulatory restrictions
